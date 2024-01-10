@@ -2,8 +2,8 @@ import 'package:flame/components.dart';
 import 'package:flutter/cupertino.dart';
 
 class Map extends RectangleComponent {
-  static double mapWidth = 2000;
-  static double mapHeight = 1000;
+  static double mapWidth = 1000;
+  static double mapHeight = 500;
   Map()
       : super(
             size: Vector2(mapWidth, mapHeight),

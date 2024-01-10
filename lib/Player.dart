@@ -14,9 +14,9 @@ class Player extends PolygonComponent {
   );
   Player()
       : super([
-          Vector2(0, 100),
-          Vector2(50, 100),
-          Vector2(25, 0),
+          Vector2(0, 50),
+          Vector2(25, 50),
+          Vector2(12.5, 0),
         ],
             paint: Paint()
               ..color = Color.fromARGB(222, 255, 255, 0)
@@ -29,9 +29,9 @@ class Player extends PolygonComponent {
   void onLoad() async {
     //await add(effect);
     await add(PolygonComponent([
-      Vector2(0, 100),
-      Vector2(50, 100),
-      Vector2(25, 0),
+      Vector2(0, 50),
+      Vector2(25, 50),
+      Vector2(12.5, 0),
     ],
         paint: Paint()
           ..color = Color.fromARGB(250, 1, 0, 0)
@@ -50,7 +50,7 @@ class Player extends PolygonComponent {
     if (direction.leftX != 0 || direction.leftY != 0) {
       angle = atan2(direction.leftY, direction.leftX) + pi / 2;
 
-      position = position + Vector2(direction.leftX, direction.leftY) * 4;
+      position = position + Vector2(direction.leftX, direction.leftY) * 2;
     }
   }
 }
